@@ -1,0 +1,6 @@
+{
+  "name": "PokéTarefas",
+  "description": "Um aplicativo de lista de tarefas com temática Pokémon (Vermelho e Preto). Possui login, cadastro, gerenciamento de múltiplas listas de tarefas estilizadas como uma Pokédex, organização, reordenação e controle de tarefas, com suporte a temas claro e escuro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Mono&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Outfit", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "Fira Mono", monospace;
+  
+  --color-poke-red: #FF0000;
+  --color-poke-red-hover: #CC0000;
+  --color-poke-red-dark: #800000;
+  --color-poke-black: #121212;
+  --color-poke-black-card: #1A1A1A;
+  --color-poke-black-light: #2A2A2A;
+}
+
+/* Base modifications for body, complying with Elegant Dark specifications */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar matching Red & Black Pokédex theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(18, 18, 18, 0.05);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(18, 18, 18, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CC0000;
+}
+
+/* Elegant shadow for premium styled card design on dark theme */
+.shadow-elegant-dark {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-elegant-light {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom left-border highlights on hover based on template specifications */
+.elegant-hover-line {
+  border-left: 4px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.elegant-hover-line:hover {
+  border-left-color: #FF0000;
+  background: rgba(255, 0, 0, 0.06);
+}
+
+.dark .elegant-hover-line:hover {
+  background: rgba(255, 0, 0, 0.12);
+}
+
+/* Custom retro glowing and keyframes for sleek gaming experience */
+@keyframes pokePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.3);
+  }
+}
+
+.poke-glow-btn {
+  animation: pokePulse 3.5s infinite ease-in-out;
+}
+
+.pokemon-card-bg {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle, rgba(255, 0, 0, 0.06) 1px, transparent 1px);
+}
+
+.dark .pokemon-card-bg {
+  background-image: radial-gradient(circle, rgba(255, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* Fallback Estilos Modo Escuro Manual (Garante contraste e escurecimento imediato) */
+.dark body,
+.dark .min-h-screen,
+html.dark {
+  background-color: #121212 !important;
+  color: #f4f4f5 !important;
+}
+
+.dark header {
+  background-color: #121212 !important;
+}
+
+.dark .bg-white,
+.dark .bg-white\/90 {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: #27272a !important;
+}
+
+.dark .text-zinc-800 {
+  color: #e4e4e7 !important;
+}
+
+.dark .text-zinc-900 {
+  color: #ffffff !important;
+}
+
+.dark .bg-zinc-50 {
+  background-color: #121212 !important;
+}
+
+.dark .border-zinc-200,
+.dark .border-zinc-300 {
+  border-color: #27272a !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #27272a !important;
+}
+
+.dark .text-zinc-600 {
+  color: #a1a1aa !important;
+}
+
+.dark .text-zinc-650 {
+  color: #a1a1aa !important;
+}
+
+.dark .bg-zinc-50\/70 {
+  background-color: rgba(26, 26, 26, 0.7) !important;
+}
+
